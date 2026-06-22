@@ -1,16 +1,40 @@
-# React + Vite
+# 🎬 MovieBox
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive, and modern movie dashboard application built with **React** and **React Router**. MovieBox allows users to browse seamlessly, search for their favorite titles, and curate a personalized list of favorite films with dynamic user experience animations.
 
-Currently, two official plugins are available:
+![MovieBox Preview](https://via.placeholder.com/800x450?text=MovieBox+App+Preview) <!-- 💡 Replace with an actual screenshot link later if you want! -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Dynamic Routing:** Seamless navigation between Home and Favorites pages via `react-router-dom`.
+*   **Smart Search Context:** The search bar dynamically adapts its placeholder text based on the active route.
+*   **Smooth UX Micro-interactions:** The favorites count badge features a smooth, custom CSS entry animation that triggers instantly on every state update.
+*   **Fully Responsive Design:** Flexbox and CSS Grid layout built from scratch to look flawless on Desktop, Tablet, and Mobile devices.
+*   **Clean Architecture:** Modular component design separating rendering logic from presentation styles.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+*   **Frontend Library:** [React](https://react.dev/)
+*   **Routing:** [React Router v6](https://reactrouter.com/)
+*   **Build Tool:** [Vite](https://vite.dev/) (Fast and lightweight development)
+*   **Styling:** Custom Vanilla CSS3 (including Keyframe animations and Media Queries)
+*   **Icons:** [FontAwesome](https://fontawesome.com/)
+
+---
+
+## 🚀 Getting Started
+
+Follow these quick steps to get the project up and running locally on your machine.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+
+### Installation
+
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/Anfas01/movie-box.git](https://github.com/Anfas01/movie-box.git)
