@@ -27,14 +27,3 @@ A sleek, responsive, and modern movie dashboard application built with **React**
 ---
 
 ## 🚀 Getting Started
-
-Follow these quick steps to get the project up and running locally on your machine.
-
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
-
-### Installation
-
-1. **Clone the repository:**
-```bash
-   git clone [https://github.com/Anfas01/movie-box.git](https://github.com/Anfas01/movie-box.git)
