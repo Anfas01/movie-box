@@ -1,13 +1,18 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import './Header.css';
 
-function Header({ favorites = [] }) {
+function Header({ favorites }) {
   const location = useLocation();
+  const [query, setQuery] = useState('');
 
-  // Dynamically switches placeholders based on the active page
-  const searchPlaceholder = location.pathname === '/favorites' 
-    ? 'Search for your favorite movies...' 
+  const searchPlaceholder = location.pathname === '/favorites'
+    ? 'Search for your favorite movies...'
     : 'Search for movies...';
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+  };
 
   return (
     <header className="header">
@@ -15,12 +20,18 @@ function Header({ favorites = [] }) {
         <NavLink to="/">🎬 MovieBox</NavLink>
       </div>
 
-      <div className="search-bar">
-        <input type="text" placeholder={searchPlaceholder} />
-        <button className='search-button'>
+      {/* CHANGED: Converted from <div> to <form> to capture Enter key presses natively */}
+      <form onSubmit={handleSearch} className="search-bar">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={searchPlaceholder}
+        />
+        <button type="submit" className='search-button'>
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
-      </div>
+      </form>
 
       <nav className="header-nav">
         <ul className="nav-links">
