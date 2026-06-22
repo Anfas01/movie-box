@@ -26,4 +26,3 @@ A sleek, responsive, and modern movie dashboard application built with **React**
 
 ---
 
-## 🚀 Getting Started
