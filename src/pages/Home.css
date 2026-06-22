@@ -1,0 +1,22 @@
+.home-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 70px); /* Ensures page takes up space under header */
+}
+
+.page-title {
+  color: #fff;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.movie-card__grids {
+  display: grid;
+  /* 💡 Increased minimum column size from 200px to 260px */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem; 
+  justify-items: center; 
+  padding-bottom: 3rem;
+}

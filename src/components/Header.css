@@ -1,0 +1,172 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 1.5rem;
+}
+
+.header-brand a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+  color: #e50914;
+}
+
+/* 2. Hidden Starting State for the Underline */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0%; /* Starts invisible at 0% width */
+  height: 2px;
+  background-color: #e50914;
+  margin-top: 0.2rem;
+  /* Smoothly transitions the width from 0% to 100% and back */
+  transition: width 0.3s ease-in-out; 
+}
+
+/* 3. Hover Trigger to Reveal the Underline */
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%; /* Expands to full width smoothly on hover */
+}
+
+/* ==========================================================================
+   FAVORITES COUNT CHANGE ANIMATION ONLY
+   ========================================================================== */
+
+.fav-count {
+  display: inline-block;
+  margin: 0 2px;
+  animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 0 1 400px;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus-within {
+  border-color: #e50914;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.search-button:hover {
+  color: #e50914;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE HEADER STYLES (Mobile / Tablet Overrides)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .header {
+    /* Switches to a column layout to avoid squishing elements horizontally */
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Centers your logo/brand name */
+  .header-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Forces the search bar to span full width on mobile screens */
+  .search-bar {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Spreads the Navigation links out evenly across the bottom row */
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around; /* Distributes links evenly */
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem; /* Marginally reduces text size for mobile viewports */
+    padding: 0.5rem;
+  }
+}
